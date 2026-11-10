@@ -1,8 +1,12 @@
-let numeroSecreto = 6;
-let numeroUsuario = prompt("Me indicas un numero por favor:");
-
-console.log(numeroUsuario);
-
-if (numeroUsuario == numeroSecreto) {
-    alert('Acertaste el numero');
-}
+let cal = prompt("digita la calificcion");
+console.log (cal);
+if (cal > 6){    
+    if (cal >9){
+        alert ("excelente")
+    }
+    alert("Aprobado");
+        
+}else {
+        alert("reprobado")
+    } 
+          
