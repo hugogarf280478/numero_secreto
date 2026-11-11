@@ -1,12 +1,17 @@
-let cal = prompt("digita la calificcion");
-console.log (cal);
-if (cal > 6){    
-    if (cal >9){
-        alert ("excelente")
-    }
-    alert("Aprobado");
+//se crearon la variables
+
+let numeroSecreto = 7;
+let numUsuario = prompt("ingresa un numero del 1 al 10");
+
+console.log(typeof numeroSecreto);
+
+if (numUsuario == numeroSecreto){
+    // si la condicion se cumple muestra alerta
+        alert(`felicidades acertaste el numero secreto es ${numeroSecreto}`);
         
-}else {
-        alert("reprobado")
-    } 
-          
+    } else {
+        // si la cndicion es negativa muestra esta alerte
+        alert('numero incorrecto intenta nuevamente')
+} 
+
+
