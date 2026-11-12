@@ -1,20 +1,23 @@
-//se crearon la variables
+//se crearon todas la variables
 
-let numeroSecreto = 7;
+let numeroSecreto = Math.floor(Math.random()*10)+1;
 let numUsuario = 0;
 let intentos = 1; 
-let palabraVeces = "vez";
+// let palabraVeces = "vez";
+let maxIntentos =5;
 
 
-console.log(typeof numeroSecreto);
+// solo lo utilizo para mostar en codigo console.log(typeof numeroSecreto);
 // minetras sean diferentes pedimos nuevamente ingresar numero
 while (numUsuario != numeroSecreto){ 
  numUsuario= prompt("ingresa un numero del 1 al 10");
  
  // inica ciclo
     if (numUsuario == numeroSecreto){
-    // si la condicion se cumple muestra alerta
-        alert(`felicidades acertaste el numero secreto es ${numeroSecreto}.lo hiciste en ${intentos} ${palabraVeces}`);
+// si la condicion se cumple muestra alerta
+// se utiliza operadores ternarios $intentos == veces? utilizado como if : utilizados ocmoo else 
+    
+        alert(`felicidades acertaste el numero secreto es ${numeroSecreto}.lo hiciste en ${intentos} ${intentos== 1? 'vez':'veces'} `);
        
         
     } else {
@@ -27,8 +30,13 @@ while (numUsuario != numeroSecreto){
             alert ("el numero secreto es mayor");
         }
 // iniciar contador
-         intentos=intentos+1;
-         palabraVeces="veces";
+         intentos++;
+
+//  palabraVeces="veces";
+        if (intentos>maxIntentos){
+            alert ("llegaste el maximo de intentos permitidos");
+          break;
+        }
        
 } 
 
